@@ -19,10 +19,11 @@ var observer = new MutationObserver((mutations, observer) => {
 
   //when buttons have loaded
   if (currButtonLength !== prevButtonLength) {
-    console.log('button length has changed', currButtonLength, prevButtonLength)
+    console.log('new buttons have loaded', currButtonLength, prevButtonLength)
     observer.buttonLength = currButtonLength
     //scroll to bottom only when currButtonLength is not yet 2468
     if (currButtonLength !== 242) {
+      console.log('scoll down!')
       toBottom()
     } else {
       console.log('done scrolling!')
